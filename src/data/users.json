@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Jordan",
+    "email": "jpieton62@gmail.com",
+    "avatar": "avatar.png",
+    "status": "Admin"
+  },
+  {
+    "id": 2,
+    "name": "Emma Dubois",
+    "email": "emma.dubois@example.com",
+    "avatar": "avatar2.png",
+    "status": "Reader"
+  },
+  {
+    "id": 3,
+    "name": "Lucas Martin",
+    "email": "lucas.martin@example.com",
+    "avatar": "avatar3.png",
+    "status": "Reader"
+  },
+  {
+    "id": 4,
+    "name": "Chloé Bernard",
+    "email": "chloe.bernard@example.com",
+    "avatar": "avatar4.png",
+    "status": "Reader"
+  },
+  {
+    "id": 5,
+    "name": "Thomas Lefèvre",
+    "email": "thomas.lefevre@example.com",
+    "avatar": "avatar5.png",
+    "status": "Reader"
+  },
+  {
+    "id": 6,
+    "name": "Manon Garcia",
+    "email": "manon.garcia@example.com",
+    "avatar": "avatar6.png",
+    "status": "Reader"
+  },
+  {
+    "id": 7,
+    "name": "Hugo Lambert",
+    "email": "hugo.lambert@example.com",
+    "avatar": "avatar7.png",
+    "status": "Reader"
+  },
+  {
+    "id": 8,
+    "name": "Camille Moreau",
+    "email": "camille.moreau@example.com",
+    "avatar": "avatar8.png",
+    "status": "Reader"
+  },
+  {
+    "id": 9,
+    "name": "Nathan Robert",
+    "email": "nathan.robert@example.com",
+    "avatar": "avatar9.png",
+    "status": "Reader"
+  },
+  {
+    "id": 10,
+    "name": "Léa Fontaine",
+    "email": "lea.fontaine@example.com",
+    "avatar": "avatar10.png",
+    "status": "Reader"
+  }
+]
