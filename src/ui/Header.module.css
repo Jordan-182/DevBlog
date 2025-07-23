@@ -1,0 +1,100 @@
+.globalHeader {
+  height: 4.5rem;
+  background-color: var(--white);
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.login {
+  display: none;
+}
+
+.button {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.globalNav {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: var(--white);
+  width: 100vw;
+  left: 0;
+  top: 4rem;
+  gap: 1rem;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.none {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .button {
+    display: none;
+  }
+
+  .title {
+    order: 0;
+    position: static;
+    transform: translateX(0);
+  }
+
+  .globalNav,
+  .none {
+    display: block;
+    order: 1;
+    position: static;
+  }
+
+  .nav {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .avatar {
+    order: 2;
+  }
+
+  .login {
+    display: block;
+    order: 3;
+  }
+
+  .burgerLogin {
+    display: none;
+  }
+}
