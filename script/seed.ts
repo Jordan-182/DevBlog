@@ -20,8 +20,6 @@ const seed = async () => {
       database: MYSQL_DB_NAME,
     });
 
-    await db.query("DELETE FROM users");
-    await db.query("ALTER TABLE users AUTO_INCREMENT = 1");
     await db.query("DELETE FROM articles");
     await db.query("ALTER TABLE articles AUTO_INCREMENT = 1");
 

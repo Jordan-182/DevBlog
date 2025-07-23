@@ -1,20 +1,21 @@
-const infoMessages = {
+const userMessages = {
   error:
-    "Erreur lors de la récupération des infos, veuillez réessayer ulterieurement",
-  errorDetail: "Erreur lors de la récupération de l'information",
+    "Erreur lors de la récupération des utilisateurs, veuillez réessayer ultérieurement",
+  errorDetail: "Erreur lors de la récupération de l'utilisateur",
   server: "Une erreur est survenue, veuillez réessayer plus tard",
   invalidId: "Contenu invalide, veuillez recommencer",
-  deleted: "Information supprimée avec succès",
+  invalidEmail: "Contenu invalide, veuillez recommencer",
+  deleted: "Utilisateur supprimé avec succès",
   deleteFail:
-    "erreur lors de la suppression de l'information, veuillez réessayer ulterieurement",
+    "erreur lors de la suppression de l'utilisateur, veuillez réessayer ultérieurement",
   addFail:
-    "erreur lors de l'ajout de votre information, veuillez réessayer ulterieurement",
+    "erreur lors de l'ajout de l'utilisateur, veuillez réessayer ultérieurement",
   editFail:
-    "erreur lors de la modification de votre information, veuillez réessayer ulterieurement",
+    "erreur lors de la modification de l'utilisateur, veuillez réessayer ultérieurement",
   invalidData: "Les données fournies sont invalides",
-  addSuccess: "Information ajoutée avec succès",
-  notFound: "Aucune information trouvée avec cet ID",
-  updateSuccess: "Information mise à jour avec succès",
-}
+  addSuccess: "Utilisateur ajouté avec succès",
+  notFound: "Aucun utilisateur trouvé avec cet ID",
+  updateSuccess: "Utilisateur mis à jour avec succès",
+};
 
-export { infoMessages }
+export { userMessages };

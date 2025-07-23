@@ -1,12 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Jordan",
-    "email": "jpieton62@gmail.com",
-    "avatar": "avatar.png",
-    "status": "Admin"
-  },
-  {
     "id": 2,
     "name": "Emma Dubois",
     "email": "emma.dubois@example.com",

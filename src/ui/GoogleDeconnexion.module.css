@@ -1,0 +1,21 @@
+.button {
+  width: 10rem;
+  height: 3rem;
+
+  button {
+    border-radius: 5px;
+    background-color: var(--red1);
+    color: var(--red2);
+    border: none;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+
+    &:hover {
+      background-color: var(--red2);
+      color: var(--red1);
+    }
+  }
+}
