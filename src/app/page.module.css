@@ -1,5 +1,22 @@
-.page {
-  min-height: calc(100svh - 4.5rem);
-  padding: 80px;
-  font-family: var(--font-geist-sans);
+.homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: auto;
+}
+
+.cta {
+  padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 5px;
 }
