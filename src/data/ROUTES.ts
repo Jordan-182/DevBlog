@@ -1,15 +1,16 @@
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 const appUrl = process.env.NEXT_PUBLIC_APP_URL;
 const apiRoutes = {
-  INFOS: `${apiUrl}/infos`,
   USERS: `${apiUrl}/users`,
+  ARTICLES: `${apiUrl}/articles`,
 };
 
 const appRoutes = {
-  INFOS: `${appUrl}/infos`,
-  INFOS_ID: (id: number) => `${appUrl}/infos/${id}`,
-  INFOS_ADD: `${appUrl}/infos/ajouter-info`,
-  INFOS_EDIT: (id: number) => `${appUrl}/infos/${id}/editer-info`,
+  HOME: `${appUrl}`,
+  ABOUT: `${appUrl}/a-propos`,
+  BLOG: `${appUrl}/blog`,
+  PROFIL: `${appUrl}/profil`,
+  ADMIN: `${appUrl}/admin`,
 };
 
 export { apiRoutes, appRoutes };
