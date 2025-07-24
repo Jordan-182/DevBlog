@@ -14,7 +14,6 @@ export async function middleware(request: NextRequest) {
 
   if (isProtectedPage) {
     const token = await getToken({ req: request, secret });
-    console.log("TOKEN :", token);
 
     if (!token || token.role !== "Admin") {
       const url = request.nextUrl.clone();
