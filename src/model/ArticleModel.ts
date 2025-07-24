@@ -6,7 +6,7 @@ export class ArticleModel {
     private _summary: string,
     private _content: string,
     private _cover_url: string,
-    private _created_at: Date,
+    private _created_at: string,
     private _user_id: number
   ) {}
 
@@ -54,11 +54,11 @@ export class ArticleModel {
     this._cover_url = value;
   }
 
-  get created_at(): Date {
+  get created_at(): string {
     return this._created_at;
   }
 
-  set created_at(value: Date) {
+  set created_at(value: string) {
     this._created_at = value;
   }
 
