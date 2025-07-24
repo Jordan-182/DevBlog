@@ -16,3 +16,13 @@
     width: 100%;
   }
 }
+
+.likeSection {
+  height: 20px;
+  button {
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+}
