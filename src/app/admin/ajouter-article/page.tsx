@@ -15,6 +15,7 @@ export default function AddArticle() {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const { setArticles } = useArticlesContext();
+
   const handleSubmit = async (formData: FormData) => {
     const title = formData.get("title")?.toString().trim() || "";
     const slug = formData.get("slug")?.toString().trim() || "";
