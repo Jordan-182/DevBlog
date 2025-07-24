@@ -1,3 +1,4 @@
+import { ArticlesProvider } from "@/context/ArticlesContext";
 import { UserProvider } from "@/context/UserContext";
 import Header from "@/ui/Header";
 import type { Metadata } from "next";
@@ -30,8 +31,10 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <SessionWrapper>
           <UserProvider>
-            <Header />
-            <main>{children}</main>
+            <ArticlesProvider>
+              <Header />
+              <main>{children}</main>
+            </ArticlesProvider>
           </UserProvider>
         </SessionWrapper>
       </body>

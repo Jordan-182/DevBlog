@@ -8,8 +8,8 @@ const { MYSQL_DB_HOST, MYSQL_DB_USER, MYSQL_DB_PASSWORD, MYSQL_DB_NAME } =
 
 const articlesPath = path.join(__dirname, "../src/data/articles.json");
 const articles = JSON.parse(fs.readFileSync(articlesPath, "utf-8"));
-const usersPath = path.join(__dirname, "../src/data/users.json");
-const users = JSON.parse(fs.readFileSync(usersPath, "utf-8"));
+// const usersPath = path.join(__dirname, "../src/data/users.json");
+// const users = JSON.parse(fs.readFileSync(usersPath, "utf-8"));
 
 const seed = async () => {
   try {
@@ -23,12 +23,12 @@ const seed = async () => {
     await db.query("DELETE FROM articles");
     await db.query("ALTER TABLE articles AUTO_INCREMENT = 1");
 
-    for (const { name, email, avatar, status } of users) {
-      await db.query(
-        "INSERT INTO users (name, email, avatar, status) VALUES (?, ?, ?, ?)",
-        [name, email, avatar, status]
-      );
-    }
+    // for (const { name, email, avatar, status } of users) {
+    //   await db.query(
+    //     "INSERT INTO users (name, email, avatar, status) VALUES (?, ?, ?, ?)",
+    //     [name, email, avatar, status]
+    //   );
+    // }
 
     for (const {
       title,
