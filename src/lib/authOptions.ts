@@ -1,13 +1,6 @@
 import { db } from "@/lib/db";
 import { RowDataPacket } from "mysql2";
-import {
-  Account,
-  NextAuthOptions,
-  Profile,
-  SessionStrategy,
-  User,
-} from "next-auth";
-import { AdapterUser } from "next-auth/adapters";
+import { NextAuthOptions, SessionStrategy } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 interface UserRow {
@@ -35,15 +28,7 @@ export const authOptions: NextAuthOptions = {
     strategy: "jwt" as SessionStrategy,
   },
   callbacks: {
-    async signIn({
-      user,
-    }: {
-      user: AdapterUser | User;
-      account: Account | null;
-      profile?: Profile;
-      email?: { verificationRequest?: boolean };
-      credentials?: Record<string, unknown>;
-    }) {
+    async signIn({ user }) {
       if (!user.email) return false;
 
       const name = user.name ? user.name.split(" ")[0] : "Utilisateur connecté";
@@ -59,7 +44,6 @@ export const authOptions: NextAuthOptions = {
             `INSERT INTO users (name, email, avatar, status) VALUES (?, ?, ?, ?)`,
             [name, user.email, user.image, "Reader"]
           );
-          console.log("user image : ", user.image);
         }
 
         return true;
@@ -67,6 +51,37 @@ export const authOptions: NextAuthOptions = {
         console.error("Error during signIn callback:", error);
         return false;
       }
+    },
+
+    async jwt({ token, user }) {
+      if (user?.email) {
+        token.email = user.email;
+      }
+
+      const email = user?.email ?? token.email;
+
+      if (email) {
+        const [rows] = await db.query<UserRow[] & RowDataPacket[]>(
+          "SELECT * FROM users WHERE email = ?",
+          [email]
+        );
+
+        const dbUser = rows[0];
+        if (dbUser) {
+          token.role = dbUser.status;
+          token.id = dbUser.id;
+        }
+      }
+
+      return token;
+    },
+
+    async session({ session, token }) {
+      if (token && session.user) {
+        session.user.role = token.role;
+        session.user.id = token.id;
+      }
+      return session;
     },
   },
 };
