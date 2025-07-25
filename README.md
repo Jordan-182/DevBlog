@@ -1,28 +1,78 @@
-# Scholar Next.js - Projet Pédagogique
+# 📰 Blog avec authentification et système de likes
 
-Ce projet est une application développée avec **Next.js 15**. Il s'agit d'un support d'apprentissage pour comprendre l'utilisation des routes API, des composants Server & Client, de la base de données MySQL.
+Ce projet est une application de blog développée avec **Next.js 15**. Elle permet d'afficher des articles, de les liker, et d’administrer le contenu via une interface sécurisée.  
+L’authentification est gérée avec **NextAuth**, et les likes sont stockés en base de données.
 
-## Prérequis
+---
 
-- Node.js >= 18
-- npm >= 9
-- MySQL Server installé
-- Connaissances de base en React, SQL, gestion de fichiers et terminal
+## 📚 Contexte
 
-## Installation & Utilisation
+Ce projet a été réalisé dans le cadre de ma formation en développement web chez **Wild Code School**.  
+Il m’a permis de consolider mes compétences sur :
 
-1. Cloner le projet
-2. Copier le fichier `.env.sample` en `.env` et compléter les informations de connexion à la base de données
-3. Lancer la migration et l'hydratation :
-   ```bash
-   npm run db:migrate
-   npm run db:seed
-   ```
-4. Lancer le serveur de développement :
-   ```bash
-   npm run dev
-   ```
+- Next.js App Router
+- API routes / REST backend avec MySQL
+- Authentification sécurisée (NextAuth)
+- Gestion de contexte React
 
-## Merci et bon code !
+---
 
-Ce projet a été généré avec soin par [J_Maniak](https://www.twitch.tv/j_maniak) en collaboration avec ChatGPT.
+## 🛠️ Technologies utilisées
+
+- **Next.js 15 (App Router)**
+- **TypeScript**
+- **MySQL** (via `mysql2`)
+- **NextAuth** (authentification avec sessions)
+- **Context API** (gestion utilisateur et articles)
+- **REST API maison** (routes API dans `/api`)
+- **ESLint + Prettier**
+
+---
+
+## 🖼️ Fonctionnalités
+
+- Affichage dynamique des articles (`/blog/[slug]`)
+- Authentification via NextAuth
+- Like d’un article si connecté
+- Affichage conditionnel des interactions
+- Administration privée possible (si rôle admin) pour ajouter, modifier, ou supprimer un article
+- Système de contextes pour partager les données globales
+
+---
+
+## Database
+
+![Aperçu de la database](./public/readme-assets/db_devblog.png)
+
+---
+
+## 💻 Installation en local
+
+> Prérequis : Node.js 18+, MySQL installé, un `.env.local` configuré
+
+### 1. Cloner le dépôt
+
+```bash
+git clone git@github.com:Jordan-182/DevBlog.git
+cd DevBlog
+npm install
+```
+
+# Connexion à la base de données MySQL et NextAuth (authentification)
+
+- Remplir le .env en suivant l'exemple du .env.sample
+
+# Créer la base de données et l'hydrater
+
+```bash
+npm run db:migrate
+npm run db:seed
+```
+
+# Lancer le projet
+
+```bash
+npm run dev
+```
+
+- Se rendre sur : http://localhost:3000
