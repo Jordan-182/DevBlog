@@ -1,11 +1,11 @@
 import { apiRoutes } from "@/data/ROUTES";
 import { ArticleModel } from "@/model/ArticleModel";
-import LikeButton from "@/ui/LikeButton";
+import LikesSection from "@/ui/LikesSection";
 import Link from "next/link";
 import styles from "./slugPage.module.css";
 
 export async function generateStaticParams() {
-  const res = await fetch(apiRoutes.LIKES);
+  const res = await fetch(apiRoutes.ARTICLES);
   const articles = await res.json();
 
   return articles.map((article: ArticleModel) => ({
@@ -31,7 +31,7 @@ export default async function ArticlePage({
       <p>Posté le {article.created_at}</p>
       <div dangerouslySetInnerHTML={{ __html: article.content }} />
       <div className={styles.likeSection}>
-        <LikeButton article={article} />
+        <LikesSection article={article} />
       </div>
     </article>
   );
