@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
 
   try {
     const [rows] = await db.query(
-      "SELECT u.name, u.email, u.avatar, u.status FROM users AS u WHERE u.email = ?",
+      "SELECT u.id, u.name, u.email, u.avatar, u.status FROM users AS u WHERE u.email = ?",
       [userEmail]
     );
     const results = Array.isArray(rows) ? (rows as UserModel[]) : [];

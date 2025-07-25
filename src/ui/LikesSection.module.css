@@ -1,0 +1,11 @@
+.likesContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.likesCounter {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}

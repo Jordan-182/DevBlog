@@ -38,4 +38,23 @@ const articlesMessages = {
   updateSuccess: "Article mis à jour avec succès",
 };
 
-export { articlesMessages, userMessages };
+const likesMessages = {
+  error:
+    "Erreur lors de la récupération des likes, veuillez réessayer ultérieurement",
+  errorDetail: "Erreur lors de la récupération du like",
+  server: "Une erreur est survenue, veuillez réessayer plus tard",
+  invalidId: "Contenu invalide, veuillez recommencer",
+  invalidEmail: "Contenu invalide, veuillez recommencer",
+  deleted: "Like supprimé avec succès",
+  deleteFail:
+    "erreur lors de la suppression du like, veuillez réessayer ultérieurement",
+  addFail: "erreur lors de l'ajout du like, veuillez réessayer ultérieurement",
+  editFail:
+    "erreur lors de la modification du like, veuillez réessayer ultérieurement",
+  invalidData: "Les données fournies sont invalides",
+  addSuccess: "Like ajouté avec succès",
+  notFound: "Aucun like trouvé avec cet ID",
+  updateSuccess: "Like mis à jour avec succès",
+};
+
+export { articlesMessages, likesMessages, userMessages };

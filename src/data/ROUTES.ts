@@ -3,6 +3,7 @@ const appUrl = process.env.NEXT_PUBLIC_APP_URL;
 const apiRoutes = {
   USERS: `${apiUrl}/users`,
   ARTICLES: `${apiUrl}/articles`,
+  LIKES: `${apiUrl}/likes`,
 };
 
 const appRoutes = {
